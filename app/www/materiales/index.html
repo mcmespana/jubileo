@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="es"> 
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>Materiales</title>
+
+        <link rel="stylesheet" href="../css/style.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    </head>
+
+    <body>
+        <!-- selector de días -->
+        <div id="dayTabs" class="tabs"></div>
+
+        <!-- tarjetas del día -->
+        <div id="slots"></div>
+
+        <!-- NAVBAR (inyectada) -->
+        <div id="navbar"></div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js"></script>
+        <script src="../cordova.js"></script>
+        <script src="../js/navbar.js"></script>
+
+        <script>
+            const days = [
+                { d: "29 Julio", w: "Lunes" },
+                { d: "30 Julio", w: "Martes" },
+                { d: "31 Julio", w: "Miércoles" },
+                { d: "1 Agosto", w: "Jueves" },
+                { d: "2 Agosto", w: "Viernes" },
+                { d: "3 Agosto", w: "Sábado" },
+                { d: "4 Agosto", w: "Domingo" }
+            ];
+            const cards = [
+                { icon: "fa-person-praying", color: "var(--yellow)", text: "Oración de la Mañana" },
+                { icon: "fa-landmark", color: "var(--blue)", text: "Visita" },
+                { icon: "fa-heart-pulse", color: "var(--red)", text: "Tiempo de Reflexión" }
+            ];
+
+            const tabsEl = document.getElementById("dayTabs");
+            days.forEach((d, i) => {
+                const b = document.createElement("button");
+                b.innerHTML = `${d.d}<small>${d.w}</small>`;
+                if (i === 0) b.classList.add("active");
+                b.onclick = () => selectDay(i, b);
+                tabsEl.appendChild(b);
+            });
+            renderCards();
+
+            function renderCards() {
+                const c = document.getElementById("slots");
+                c.innerHTML = "";
+                cards.forEach((cd) => {
+                    c.insertAdjacentHTML(
+                        "beforeend",
+                        `<div class="mcard"><i class="fa-solid ${cd.icon}" style="color:${cd.color}"></i>${cd.text}</div>`
+                    );
+                });
+            }
+            function selectDay(i, btn) {
+                document.querySelectorAll(".tabs button").forEach((b) => b.classList.remove("active"));
+                btn.classList.add("active");
+                // aquí podrías cambiar el array 'cards' según el día seleccionado
+            }
+        </script>
+    </body>
+</html>
