@@ -1,9 +1,14 @@
 # JubileoApp
 
 ## Ejecutando test
+En la raiz del proyecto...
 *  `npm run build-cordova`
-*  `npm run ios --emulator` `run cordova ios`
-*  `cordova run ios --device`
+
+Cambias a cordova `cd cordova`
+* `cordova build ios`
+* `cordova run ios --emulator`
+O en dispositivo
+* `cordova run ios --device`
 
 ## Framework7 CLI Options
 
