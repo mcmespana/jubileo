@@ -1,0 +1,17 @@
+{
+  "name": "jubileoapp",
+  "private": true,
+  "version": "1.0.0",
+  "description": "JubileoApp",
+  "repository" : "",
+  "license" : "UNLICENSED",
+  "scripts" : {"start":"npm run dev","dev":"cross-env NODE_ENV=development vite","build":"cross-env NODE_ENV=production vite build","build-cordova":"cross-env TARGET=cordova cross-env NODE_ENV=production vite build && node ./build/build-cordova.js && cd cordova && cordova build","build-cordova-ios":"cross-env TARGET=cordova cross-env NODE_ENV=production vite build && node ./build/build-cordova.js && cd cordova && cordova build ios","cordova-ios":"cross-env TARGET=cordova cross-env NODE_ENV=production vite build && node ./build/build-cordova.js && cd cordova && cordova run ios","build-cordova-android":"cross-env TARGET=cordova cross-env NODE_ENV=production vite build && node ./build/build-cordova.js && cd cordova && cordova build android","cordova-android":"cross-env TARGET=cordova cross-env NODE_ENV=production vite build && node ./build/build-cordova.js && cd cordova && cordova run android","postinstall":"cpy --flat ./node_modules/framework7-icons/fonts/*.* ./src/fonts/ && cpy --flat ./node_modules/material-icons/iconfont/*.* ./src/fonts/"},
+  "browserslist": [
+    "IOS >= 15",
+    "Safari >= 15",
+    "last 5 Chrome versions",
+    "last 5 Firefox versions"
+  ],
+  "dependencies": {},
+  "devDependencies": {}
+}

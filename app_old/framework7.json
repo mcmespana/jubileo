@@ -1,0 +1,31 @@
+{
+  "cwd": "/Users/david/Documents/GitHub/jubileo/app",
+  "type": [
+    "cordova"
+  ],
+  "name": "JubileoApp",
+  "pkg": "com.consolacion.jubileo",
+  "framework": "core",
+  "template": "tabs",
+  "bundler": "vite",
+  "cssPreProcessor": false,
+  "cordova": {
+    "folder": "cordova",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "plugins": [
+      "cordova-plugin-statusbar",
+      "cordova-plugin-keyboard",
+      "cordova-plugin-splashscreen"
+    ]
+  },
+  "theming": {
+    "customColor": true,
+    "color": "#1e90ff",
+    "darkMode": false,
+    "iconFonts": true
+  },
+  "customBuild": false
+}
