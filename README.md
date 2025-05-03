@@ -1,5 +1,10 @@
 # JubileoApp
 
+## Ejecutando test
+*  `npm run build-cordova`
+*  `npm run ios --emulator` `run cordova ios`
+*  `cordova run ios --device`
+
 ## Framework7 CLI Options
 
 Framework7 app created with following options:
