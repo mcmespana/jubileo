@@ -1,6 +1,12 @@
 # JubileoApp
 
-## Ejecutando test
+## Para previsualizar
+Instalar en VS Code la extensión de Edge. Ejecutar
+* `npm start`
+
+Y se abre un servidor de VITE que te permite verlo todo con autoreload
+
+## Para probar en dispositivos
 En la raiz del proyecto...
 *  `npm run build-cordova`
 
